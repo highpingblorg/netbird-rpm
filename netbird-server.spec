@@ -74,7 +74,7 @@ install -Dm755 -t %{buildroot}%{_bindir} netbird-server
 
 # Generate completions
 for sh in bash zsh fish; do
-  ./netbird-server completion $sh > netbird-server.${sh}
+  ./netbird-server completion $sh --config=/dev/null > netbird-server.${sh}
 done
 install -Dm644 netbird-server.bash %{buildroot}%{_datadir}/bash-completion/completions/netbird-server
 install -Dm644 netbird-server.zsh  %{buildroot}%{_datadir}/zsh/site-functions/_netbird-server
