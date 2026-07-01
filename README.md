@@ -1,6 +1,6 @@
 # netbird — Enterprise Linux (EL8/9/10) RPM
 
-An EL8/9/10 RPM packaging of [netbird](https://github.com/netbirdio/netbird), derived from the [openSUSE package](https://build.opensuse.org/package/show/openSUSE:Factory/netbird). Builds the client plus optional `management`, `signal`, and `relay` server components and shell completions.
+An EL8/9/10 RPM packaging of [netbird](https://github.com/netbirdio/netbird), derived from the [openSUSE package](https://build.opensuse.org/package/show/openSUSE:Factory/netbird). Builds the client, `management`, `signal`, and `relay` server components and shell completions.
 
 ## Files
 
