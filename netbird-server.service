@@ -1,0 +1,21 @@
+[Unit]
+Description=NetBird Combined Server
+ConditionFileIsExecutable=/usr/bin/netbird-server
+
+After=network.target syslog.target
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/usr/bin/netbird-server --config "/etc/netbird/config.yaml"
+StandardOutput=file:/var/log/netbird/netbird.out
+StandardError=file:/var/log/netbird/netbird.err
+
+Restart=always
+
+RestartSec=120
+EnvironmentFile=-/etc/sysconfig/netbird
+
+Environment=SYSTEMD_UNIT=netbird
+[Install]
+WantedBy=multi-user.target

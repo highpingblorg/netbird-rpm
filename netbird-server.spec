@@ -1,8 +1,6 @@
 #
 # spec file for package netbird-server
 #
-# Derived from the openSUSE netbird package
-#
 %global debug_package %{nil}
 
 Name:           netbird-server
@@ -12,6 +10,7 @@ Summary:        Backend combined server (Management + Signal + Relay + STUN)
 License:        AGPL-3.0-only AND BSD-3-Clause
 URL:            https://github.com/netbirdio/netbird
 Source0:        https://github.com/netbirdio/netbird/archive/refs/tags/v%{version}.tar.gz
+Source5:        %{name}.service
 BuildRequires:  git-core
 BuildRequires:  golang >= 1.25
 BuildRequires:  systemd-rpm-macros
@@ -80,17 +79,29 @@ install -Dm644 netbird-server.bash %{buildroot}%{_datadir}/bash-completion/compl
 install -Dm644 netbird-server.zsh  %{buildroot}%{_datadir}/zsh/site-functions/_netbird-server
 install -Dm644 netbird-server.fish %{buildroot}%{_datadir}/fish/vendor_completions.d/netbird-server.fish
 
+# Install service file
+install -Dm644 %{SOURCE5} %{buildroot}%{_unitdir}/%{name}.service
 
 # Own the persistent netbird directories (co-owned with the other components).
+# The service unit also creates these at runtime via Configuration/Logs/State
 # Directory=, but owning them here guarantees they exist on install.
 install -d %{buildroot}%{_sysconfdir}/netbird
 install -d %{buildroot}/var/log/netbird
 install -d %{buildroot}/var/lib/netbird
 
+%post
+%systemd_post %{name}.service
+
+%preun
+%systemd_preun %{name}.service
+
+%postun
+%systemd_postun_with_restart %{name}.service
 
 %files
 %license LICENSE
 %{_bindir}/netbird-server
+%{_unitdir}/%{name}.service
 %dir %{_sysconfdir}/netbird
 %dir /var/log/netbird
 %dir /var/lib/netbird
