@@ -4,7 +4,7 @@
 %global debug_package %{nil}
 
 Name:           netbird-server
-Version:        0.73.2
+Version:        0.74.2
 Release:        0%{?dist}
 Summary:        Backend combined server (Management + Signal + Relay + STUN)
 License:        AGPL-3.0-only AND BSD-3-Clause
@@ -117,6 +117,8 @@ install -d %{buildroot}/var/lib/netbird
 %{_datadir}/zsh/site-functions/_netbird-server
 
 %changelog
+* Mon Jul 06 2026 highpingblorg@pm.me - 0.74.2-0
+- Bump netbird version to 0.74.2
 * Wed Jul 01 2026 highpingblorg@pm.me - 0.73.2-0
 - Initial EL8/9/10 port of the netbird combined server, split into its own spec.
 - Fetch source from GitHub by tag; build Go modules live (requires build network

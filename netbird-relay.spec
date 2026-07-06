@@ -7,7 +7,7 @@
 %global debug_package %{nil}
 
 Name:           netbird-relay
-Version:        0.73.2
+Version:        0.74.2
 Release:        0%{?dist}
 Summary:        Backend relay server component for netbird
 License:        AGPL-3.0-only AND BSD-3-Clause
@@ -54,6 +54,8 @@ install -d %{buildroot}/var/lib/netbird
 %dir /var/lib/netbird
 
 %changelog
+* Mon Jul 06 2026 highpingblorg@pm.me - 0.74.2-0
+- Bump netbird version to 0.74.2
 * Wed Jul 01 2026 highpingblorg@pm.me - 0.73.2-0
 - Initial EL8/9/10 port of the netbird relay server, split into its own spec.
 - Fetch source from GitHub by tag; build Go modules live (requires build network
