@@ -2,14 +2,42 @@
 
 An RPM package of [netbird](https://github.com/netbirdio/netbird), derived from the [openSUSE package](https://build.opensuse.org/package/show/openSUSE:Factory/netbird). Builds the client, `combined`, `management`, `signal`, and `relay` server components and shell completions.
 
-## COPR Build Status
+## Overview
 
-- netbird: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird/)
-- netbird-server: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-server/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-server/)
-- netbird-management: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-management/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-management/)
-- netbird-relay: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-relay/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-relay/)
-- netbird-signal: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-signal/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-signal/)
-- netbird-ui: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-ui/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-ui/)
+### netbird
+
+Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird/)
+
+Supported >= EL8
+
+### netbird-server
+
+Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-server/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-server/)
+
+Supported >= EL8
+
+### netbird-management
+Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-management/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-management/)
+
+Supported >= EL8
+
+### netbird-relay
+
+Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-relay/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-relay/)
+
+Supported >= EL8
+
+### netbird-signal
+
+Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-signal/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-signal/)
+
+Supported >= EL8
+
+### netbird-ui
+
+Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-ui/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/package/netbird-ui/)
+
+Supported >= EL9
 
 ## Files
 
