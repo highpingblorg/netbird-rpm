@@ -39,6 +39,10 @@ Status: [![Copr build status](https://copr.fedorainfracloud.org/coprs/highpingbl
 
 Supported >= EL9
 
+## Releasing
+
+Bump `Version:` in the spec files, commit, then push a `v<version>` tag. The [COPR build workflow](.github/workflows/copr-build.yml) submits a build of the tagged commit for every package in the [highpingblorg/netbird](https://copr.fedorainfracloud.org/coprs/highpingblorg/netbird/) COPR project and reports the results.
+
 ## Files
 
 ```

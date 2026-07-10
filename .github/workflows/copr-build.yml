@@ -1,0 +1,49 @@
+name: COPR build
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - netbird
+          - netbird-server
+          - netbird-management
+          - netbird-relay
+          - netbird-signal
+    steps:
+      - name: Install copr-cli
+        run: pip install copr-cli
+
+      - name: Configure COPR API credentials
+        env:
+          COPR_LOGIN: ${{ secrets.COPR_LOGIN }}
+          COPR_TOKEN: ${{ secrets.COPR_TOKEN }}
+          COPR_USERNAME: ${{ secrets.COPR_USERNAME }}
+          COPR_URL: ${{ vars.COPR_URL }}
+        run: |
+          mkdir -p ~/.config
+
+          cat > ~/.config/copr <<EOF
+          [copr-cli]
+          username = ${COPR_USERNAME}
+          login = ${COPR_LOGIN}
+          token = ${COPR_TOKEN}
+          copr_url = ${COPR_URL:-https://copr.fedorainfracloud.org}
+          EOF
+
+          chmod 600 ~/.config/copr
+
+      - name: Build ${{ matrix.package }} in COPR
+        run: |
+          copr-cli build-package netbird \
+            --name "${{ matrix.package }}" \
+            --enable-net on \
