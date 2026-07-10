@@ -6,7 +6,7 @@
 %global debug_package %{nil}
 
 Name:           netbird-management
-Version:        0.74.2
+Version:        0.74.3
 Release:        0%{?dist}
 Summary:        Backend management server component for netbird
 License:        AGPL-3.0-only AND BSD-3-Clause
@@ -119,6 +119,8 @@ install -d %{buildroot}/var/lib/netbird
 %{_datadir}/zsh/site-functions/_netbird-mgmt
 
 %changelog
+* Fri Jul 10 2026 highpingblorg@pm.me - 0.74.3-0
+- Bump netbird version to 0.74.3
 * Mon Jul 06 2026 highpingblorg@pm.me - 0.74.2-0
 - Bump netbird version to 0.74.2
 * Wed Jul 01 2026 highpingblorg@pm.me - 0.73.2-0
