@@ -7,7 +7,7 @@
 %global debug_package %{nil}
 
 Name:           netbird-ui
-Version:        0.74.3
+Version:        0.75.0
 Release:        0%{?dist}
 Summary:        UI panel indicator applet for netbird
 License:        AGPL-3.0-only AND BSD-3-Clause
@@ -63,6 +63,8 @@ install -Dm644 client/ui/assets/netbird-systemtray-connected.png %{buildroot}%{_
 %{_datadir}/icons/hicolor/256x256/apps/netbird*.png
 
 %changelog
+* Mon Jul 27 2026 highpingblorg@pm.me - 0.75.0-0
+- Bump netbird version to 0.75.0
 * Fri Jul 10 2026 highpingblorg@pm.me - 0.74.3-0
 - Bump netbird version to 0.74.3
 * Mon Jul 06 2026 highpingblorg@pm.me - 0.74.2-0
