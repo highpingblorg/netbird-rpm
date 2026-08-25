@@ -6,7 +6,7 @@
 %global debug_package %{nil}
 
 Name:           netbird
-Version:        0.75.0
+Version:        0.77.1
 Release:        0%{?dist}
 Summary:        Mesh VPN based on WireGuard
 License:        AGPL-3.0-only AND BSD-3-Clause
@@ -115,6 +115,8 @@ install -d %{buildroot}%{_sysconfdir}/%{name}
 %{_datadir}/zsh/site-functions/_%{name}
 
 %changelog
+* Tue Aug 25 2026 highpingblorg@pm.me - 0.77.1-0
+- Bump netbird version to 0.77.1
 * Mon Jul 27 2026 highpingblorg@pm.me - 0.75.0-0
 - Bump netbird version to 0.75.0
 * Fri Jul 10 2026 highpingblorg@pm.me - 0.74.3-0
